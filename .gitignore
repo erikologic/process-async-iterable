@@ -1,0 +1,7 @@
+node_modules
+.serverless
+.webpack
+.terraform
+.idea
+.vscode
+
