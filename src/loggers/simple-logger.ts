@@ -1,4 +1,4 @@
-export const logAnything = <T>(el: T) => {
+export const simpleLogger = <T>(el: T) => {
   let payload;
   if (typeof el === "string") {
     payload = el;
