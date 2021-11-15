@@ -2,8 +2,9 @@ import { consume } from "../../src/consumers/consume";
 import { group } from "../../src/consumers/group";
 import { fromIterable } from "../../src/producers/from-iterable";
 import { sort } from "../../src/transformers/sort";
+import { unfold } from "../../src/transformers/unfold";
 
-describe("group & sort", () => {
+describe("group, sort and unfold", () => {
   test("group is a consumer", async () => {
     const anArray = [1, 2, 3, 4];
     const source = fromIterable(anArray);
@@ -36,5 +37,16 @@ describe("group & sort", () => {
       [20, 21, 23, 26],
     ];
     expect(result).toEqual(expected);
+  });
+
+  test("unfolds an array", async () => {
+    const anArrayofArrays = [
+      [1, 2, 3, 4],
+      [20, 21, 23, 26],
+    ];
+    const source = fromIterable(anArrayofArrays);
+
+    const res = await consume(unfold(source));
+    expect(res).toEqual([1, 2, 3, 4, 20, 21, 23, 26]);
   });
 });
