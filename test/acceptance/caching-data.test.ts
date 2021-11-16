@@ -1,8 +1,11 @@
-import { fromFiles, FromFilesProps } from "../../src/cache/from-files";
-import { toFiles, ToFilesProps } from "../../src/cache/to-files";
-import { consume } from "../../src/consumers/consume";
-import { finallyDo } from "../../src/consumers/finally-do";
-import { fromIterable } from "../../src/producers/from-iterable";
+import {
+  fromFiles,
+  FromFilesProps,
+  toFiles,
+  ToFilesProps,
+} from "../../src/cache";
+import { consume, finallyDo } from "../../src/consumers";
+import { fromIterable } from "../../src/producers";
 
 interface Message {
   id: number;

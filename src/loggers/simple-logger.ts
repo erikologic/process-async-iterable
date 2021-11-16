@@ -1,4 +1,4 @@
-export const simpleLogger = <T>(el: T) => {
+export const simpleLogger = <TPayload>(el: TPayload) => {
   let payload;
   if (typeof el === "string") {
     payload = el;

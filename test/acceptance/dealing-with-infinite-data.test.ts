@@ -1,6 +1,5 @@
-import { finallyDo } from "../../src/consumers/finally-do";
-import { filterTypeSafe } from "../../src/transformers/filter";
-import { map } from "../../src/transformers/map";
+import { finallyDo } from "../../src/consumers";
+import { filterTypeSafe, map } from "../../src/transformers";
 
 describe("dealing with infinite data", () => {
   test("a generic example", async () => {

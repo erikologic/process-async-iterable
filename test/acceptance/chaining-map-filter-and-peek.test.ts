@@ -1,8 +1,6 @@
-import { consume } from "../../src/consumers/consume";
-import { fromIterable } from "../../src/producers/from-iterable";
-import { filter, not } from "../../src/transformers/filter";
-import { map } from "../../src/transformers/map";
-import { peek } from "../../src/transformers/peek";
+import { consume } from "../../src/consumers";
+import { fromIterable } from "../../src/producers";
+import { filter, map, not, peek } from "../../src/transformers";
 
 test("chaining map, filter & peek", async () => {
   const anArray = [1, 2, 3];

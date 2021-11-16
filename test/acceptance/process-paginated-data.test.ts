@@ -1,8 +1,5 @@
-import { consume } from "../../src/consumers/consume";
-import {
-  fromRecursiveFn,
-  RecursiveFn,
-} from "../../src/producers/from-recursive-fn";
+import { consume } from "../../src/consumers";
+import { fromRecursiveFn, RecursiveFn } from "../../src/producers";
 
 interface PagedData {
   payload: unknown;
