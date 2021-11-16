@@ -1,14 +1,14 @@
-type GetGroupingKey<TPayload> = (payload: TPayload) => string;
+type GroupingKeyFn<TPayload> = (payload: TPayload) => string;
 type Grouped<TPayload> = { [id: string]: TPayload[] };
 
-export const group = <TPayload>(getGroupingKey: GetGroupingKey<TPayload>) =>
+export const group = <TPayload>(groupingKeyFn: GroupingKeyFn<TPayload>) =>
   async function (
     iterable: AsyncIterable<TPayload>
   ): Promise<Grouped<TPayload>> {
     const groups: { [id: string]: TPayload[] } = {};
 
     for await (const payload of iterable) {
-      const id = getGroupingKey(payload);
+      const id = groupingKeyFn(payload);
       groups[id] = (groups[id] || []).concat(payload);
     }
 

@@ -9,5 +9,5 @@ export const filterAsync = <TPayload>(match: AsyncMatchFn<TPayload>) =>
 
 export const notAsync =
   <TPayload>(match: AsyncMatchFn<TPayload>) =>
-  async (payload: TPayload) =>
+  async (payload: TPayload): Promise<boolean> =>
     !(await match(payload));

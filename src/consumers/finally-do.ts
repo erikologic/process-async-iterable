@@ -1,8 +1,8 @@
-type FinalStepFn<TPayload> = (payload: TPayload) => Promise<void>;
+type FinallyDoFn<TPayload> = (payload: TPayload) => Promise<void>;
 
-export const finallyDo = <TPayload>(finalStepFn: FinalStepFn<TPayload>) =>
+export const finallyDo = <TPayload>(finallyDoFn: FinallyDoFn<TPayload>) =>
   async function (iterable: AsyncIterable<TPayload>) {
     for await (const el of iterable) {
-      await finalStepFn(el);
+      await finallyDoFn(el);
     }
   };

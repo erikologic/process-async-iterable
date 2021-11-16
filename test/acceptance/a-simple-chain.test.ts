@@ -1,6 +1,6 @@
-import { consume } from "../../src/consumers/consume";
-import { fromIterable } from "../../src/producers/from-iterable";
-import { map } from "../../src/transformers/map";
+import { consume } from "../../src/consumers";
+import { fromIterable } from "../../src/producers";
+import { map } from "../../src/transformers";
 
 describe("a simple case", () => {
   test("can sum numbers", async () => {

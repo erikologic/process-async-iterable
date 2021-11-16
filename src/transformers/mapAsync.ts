@@ -1,14 +1,14 @@
-type AsyncMapper<TPayloadIn, TPayloadOut> = (
+type AsyncMapFn<TPayloadIn, TPayloadOut> = (
   payload: TPayloadIn
 ) => Promise<TPayloadOut>;
 
 export const mapAsync = <TPayloadIn, TPayloadOut>(
-  mapper: AsyncMapper<TPayloadIn, TPayloadOut>
+  mapFn: AsyncMapFn<TPayloadIn, TPayloadOut>
 ) =>
   async function* (
     iterable: AsyncIterable<TPayloadIn>
   ): AsyncIterable<TPayloadOut> {
     for await (const payload of iterable) {
-      yield await mapper(payload);
+      yield await mapFn(payload);
     }
   };

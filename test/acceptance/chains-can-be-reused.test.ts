@@ -1,7 +1,6 @@
-import { consume } from "../../src/consumers/consume";
-import { fromIterable } from "../../src/producers/from-iterable";
-import { filter } from "../../src/transformers/filter";
-import { map } from "../../src/transformers/map";
+import { consume } from "../../src/consumers";
+import { fromIterable } from "../../src/producers";
+import { filter, map } from "../../src/transformers";
 
 test("chains can be reused", async () => {
   const add3 = map((x: number) => x + 3);

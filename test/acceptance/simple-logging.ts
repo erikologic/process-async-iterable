@@ -1,7 +1,7 @@
-import { consume } from "../../src/consumers/consume";
-import { simpleLogger } from "../../src/loggers/simple-logger";
-import { fromIterable } from "../../src/producers/from-iterable";
-import { peek } from "../../src/transformers/peek";
+import { consume } from "../../src/consumers";
+import { simpleLogger } from "../../src/loggers";
+import { fromIterable } from "../../src/producers";
+import { peek } from "../../src/transformers";
 
 describe("simple logger", () => {
   const consoleLogSpy = jest.spyOn(console, "log");
