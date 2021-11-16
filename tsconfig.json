@@ -3,7 +3,9 @@
   "compilerOptions": {
     "preserveConstEnums": true,
     "rootDir": ".",
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
+    "sourceMap": true
   },
   "include": [
     "src/**/*"
@@ -11,5 +13,5 @@
   "exclude": [
     "node_modules",
     "**/*.spec.ts"
-  ],
+  ]
 }
