@@ -21,8 +21,8 @@
   },
   "homepage": "https://github.com/mrenrich84/process-async-iterable#readme",
   "engines": {
-    "node": "~14",
-    "npm": "~6"
+    "node": ">=14",
+    "npm": ">=6"
   },
   "devDependencies": {
     "@cazoo/eslint-plugin-eslint": "^1.0.2",
