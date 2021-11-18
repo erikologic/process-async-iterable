@@ -10,7 +10,7 @@ export const toFiles = <TPayload>({
   dir,
   getFilename,
 }: ToFilesProps<TPayload>) => {
-  if (!existsSync(dir)) mkdirSync(dir);
+  if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
 
   return async (payload: TPayload) => {
     const filename = `${dir}/${getFilename(payload)}`;
