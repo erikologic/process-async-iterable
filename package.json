@@ -1,6 +1,6 @@
 {
   "name": "process-async-iterable",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A light framework for functional AsyncIterable processing",
   "main": "dist/src/index.js",
   "scripts": {
