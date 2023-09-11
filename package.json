@@ -1,6 +1,6 @@
 {
   "name": "process-async-iterable",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A light framework for functional AsyncIterable processing",
   "main": "dist/src/index.js",
   "scripts": {
@@ -14,12 +14,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mrenrich84/process-async-iterable.git"
+    "url": "git+https://github.com/erikologic/process-async-iterable.git"
   },
   "bugs": {
-    "url": "https://github.com/mrenrich84/process-async-iterable/issues"
+    "url": "https://github.com/erikologic/process-async-iterable/issues"
   },
-  "homepage": "https://github.com/mrenrich84/process-async-iterable#readme",
+  "homepage": "https://github.com/erikologic/process-async-iterable#readme",
   "engines": {
     "node": ">=14",
     "npm": ">=6"
